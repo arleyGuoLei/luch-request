@@ -121,6 +121,12 @@ export default (config) => {
         // #ifdef MP-BAIDU
         'cloudCache',
         'defer'
+        // #endif,
+
+        // @docs: https://developer.open-douyin.com/docs/resource/zh-CN/mini-app/develop/tutorial/experience-optimization/list/data-preload-js#1f2df7c3
+        // #ifdef MP-TOUTIAO
+        'id',
+        'usePrefetchCache'
         // #endif
       ]
       requestTask = uni.request({..._config, ...mergeKeys(optionalKeys, config)})
